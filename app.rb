@@ -5,7 +5,11 @@ module FormsLab
 
     # code other routes/actions here
     get '/' do
-      erb :new
+      erb :root
+    end
+
+    get '/new' do
+      erb :'pirates/new'
     end
 
     post '/pirates' do
@@ -16,7 +20,7 @@ module FormsLab
       end
 
       @ships = Ship.all
-      erb :show
+      erb :'pirates/show'
     end
 
   end
